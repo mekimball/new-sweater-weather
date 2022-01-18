@@ -1,5 +1,5 @@
 class BookFacade
-  def self.search_book(location, quantity = 1)
+  def self.search_book(location, quantity)
     collection = BookService.book_search(location, quantity)
     return collection, location_weather(location), books(collection)
   end

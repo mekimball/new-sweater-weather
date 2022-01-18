@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Book do
   before do
-    @book = BookFacade.search_book('Denver,co').first
+    @book = BookFacade.search_book('Denver,co', 1).first
   end
 
   it 'exists', :vcr do
