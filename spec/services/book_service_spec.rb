@@ -9,7 +9,7 @@ RSpec.describe BookService do
     results = BookService.book_search('denver,co', 5)
 
     expect(results).to be_a(Hash)
-    expect(results[:numFound]).to eq(41221)
+    expect(results[:numFound]).to eq(41219)
     expect(results[:docs].first[:title]).to eq('Denver, Co')
     expect(results[:docs].first[:isbn]).to eq(["9780762507849", "0762507845"])
     expect(results[:docs].first[:author_name]).to eq(["Universal Map"])

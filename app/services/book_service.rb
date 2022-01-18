@@ -4,8 +4,8 @@ class BookService
     Faraday.new(url: "https://openlibrary.org/")
   end
 
-  def self.book_search(location, limit)
-    response = conn.get("search.json?q=#{location}&limit=#{limit}")
+  def self.book_search(location, quantity)
+    response = conn.get("search.json?q=#{location}&limit=#{quantity}")
     JSON.parse(response.body, symbolize_names: true)
   end
 end
