@@ -11,6 +11,7 @@ RSpec.describe DailyWeather do
   end
 
   it 'has attributes', :vcr do
+    expect(@daily_weather.count).to eq(5)
     expect(@daily_weather.first.conditions).to eq('clear sky')
     expect(@daily_weather.first.date).to eq("Monday, Jan 17")
     expect(@daily_weather.first.max_temp).to eq(54.73)
