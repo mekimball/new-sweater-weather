@@ -5,9 +5,9 @@ class Book
               :publisher
 
   def initialize(data)
-    @title = data[:docs].first[:title]
-    @author = data[:docs].first[:author_name].join
-    @isbn = data[:docs].first[:isbn]
-    @publisher = data[:docs].first[:publisher]
+    @title = data[:title]
+    @author = data[:author_name].join
+    @isbn = data[:isbn]
+    @publisher = data[:publisher].join
   end
 end

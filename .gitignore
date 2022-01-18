@@ -25,3 +25,6 @@
 # Ignore application configuration
 /config/application.yml
 Gemfile.lock
+
+#ignore VCR fixtures
+spec/fixtures/vcr_cassettes
