@@ -7,7 +7,13 @@ RSpec.describe BookService do
 
   it 'can return book data', :vcr do
     results = BookService.book_search('denver,co', 5)
-    require 'pry'; binding.pry
+
+    expect(results).to be_a(Hash)
+    expect(results[:numFound]).to eq(41221)
+    expect(results[:docs].first[:title]).to eq('Denver, Co')
+    expect(results[:docs].first[:isbn]).to eq(["9780762507849", "0762507845"])
+    expect(results[:docs].first[:author_name]).to eq(["Universal Map"])
+    expect(results[:docs].first[:publisher]).to eq(["Universal Map Enterprises"])
   end
 end
 
