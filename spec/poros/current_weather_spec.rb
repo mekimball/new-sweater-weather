@@ -10,14 +10,14 @@ RSpec.describe CurrentWeather do
   end
 
   it 'has attributes', :vcr do
-    expect(@current_weather.conditions).to eq('clear sky')
-    expect(@current_weather.feels_like).to eq(51.85)
-    expect(@current_weather.humidity).to eq(24)
-    expect(@current_weather.icon).to eq('01d')
-    expect(@current_weather.sunrise).to eq(' 7:18 AM')
-    expect(@current_weather.sunset).to eq(' 5:01 PM')
-    expect(@current_weather.temperature).to eq(55.47)
-    expect(@current_weather.uvi).to eq(1.4)
+    expect(@current_weather.conditions).to eq('overcast clouds')
+    expect(@current_weather.feels_like).to eq(45.66)
+    expect(@current_weather.humidity).to eq(34)
+    expect(@current_weather.icon).to eq('04d')
+    expect(@current_weather.sunrise).to eq(' 7:17 AM')
+    expect(@current_weather.sunset).to eq(' 5:02 PM')
+    expect(@current_weather.temperature).to eq(45.66)
+    expect(@current_weather.uvi).to eq(1.21)
     expect(@current_weather.visibility).to eq(10000)
   end
 end
