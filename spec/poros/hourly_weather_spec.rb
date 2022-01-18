@@ -11,9 +11,9 @@ RSpec.describe HourlyWeather do
 
   it 'has attributes', :vcr do
     expect(@hourly_weather.length).to eq(8)
-    expect(@hourly_weather.first.time).to eq(' 4:00 PM')
-    expect(@hourly_weather.first.temperature).to eq(48.33)
-    expect(@hourly_weather.first.conditions).to eq('few clouds')
-    expect(@hourly_weather.first.icon).to eq('02d')
+    expect(@hourly_weather.first.time).to eq('10:00 AM')
+    expect(@hourly_weather.first.temperature).to eq(44.96)
+    expect(@hourly_weather.first.conditions).to eq('overcast clouds')
+    expect(@hourly_weather.first.icon).to eq('04d')
   end
 end
