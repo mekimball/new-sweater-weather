@@ -1,8 +1,6 @@
 class Api::V1::BackgroundsController < ApplicationController
 
   def index
-    pry
-    # coords = MapquestFacade.get_location(params[:location])
-    render json: {data: { id: 'null', type: 'image', attributes: { image: BackgroundsFacade.get_weather(coords.lattitude, coords.longitude)}}
+    render json: {data: { id: 'null', type: 'image', attributes: { image: BackgroundsFacade.get_background(params[:location])}}}
   end
 end

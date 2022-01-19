@@ -25,3 +25,24 @@
 # Ignore application configuration
 /config/application.yml
 Gemfile.lock
+spec/requests/api/v1/background_request_spec.rb
+spec/fixtures/vcr_cassettes/BackgroundService/can_return_backgrounds.yml
+spec/fixtures/vcr_cassettes/Book/exists.yml
+spec/fixtures/vcr_cassettes/Book/has_attributes.yml
+spec/fixtures/vcr_cassettes/BookFacade/returns_a_book.yml
+spec/fixtures/vcr_cassettes/BookService/can_return_book_data.yml
+spec/fixtures/vcr_cassettes/CurrentWeather/exists.yml
+spec/fixtures/vcr_cassettes/CurrentWeather/has_attributes.yml
+spec/fixtures/vcr_cassettes/DailyWeather/exists.yml
+spec/fixtures/vcr_cassettes/DailyWeather/has_attributes.yml
+spec/fixtures/vcr_cassettes/HourlyWeather/exists.yml
+spec/fixtures/vcr_cassettes/HourlyWeather/has_attributes.yml
+spec/fixtures/vcr_cassettes/Location/exists.yml
+spec/fixtures/vcr_cassettes/Location/has_long_and_lat.yml
+spec/fixtures/vcr_cassettes/MapquestFacade/returns_a_location.yml
+spec/fixtures/vcr_cassettes/MapquestService/can_return_locational_data.yml
+spec/fixtures/vcr_cassettes/returns_book_info_by_destination/returns_book_info.yml
+spec/fixtures/vcr_cassettes/weather_requests/can_return_a_forecast.yml
+spec/fixtures/vcr_cassettes/WeatherFacade/returns_weather.yml
+spec/fixtures/vcr_cassettes/WeatherService/can_return_current_weather_data.yml
+spec/fixtures/vcr_cassettes/WeatherService/can_return_daily_weather.yml
