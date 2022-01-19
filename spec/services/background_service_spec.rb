@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe BackgroundService do
-
   it 'can establish a connection', :vcr do
     expect(BackgroundService.conn).to be_a(Faraday::Connection)
   end

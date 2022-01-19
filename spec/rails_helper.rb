@@ -3,11 +3,15 @@ require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../config/environment', __dir__)
 # Prevent database truncation if the environment is production
-abort("The Rails environment is running in production mode!") if Rails.env.production?
+if Rails.env.production?
+  abort('The Rails environment is running in production mode!')
+end
 require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 require 'simplecov'
-SimpleCov.start
+SimpleCov.start do
+  add_filter "spec/requests/api/v1/forecast_request_spec.rb"
+end
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
 # run as spec files by default. This means that files in spec/support that end
@@ -64,9 +68,9 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 end
 VCR.configure do |config|
-  config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
+  config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
   config.hook_into :webmock
-  config.filter_sensitive_data('HIDE MY KEY') { ENV['mapquest_api_key']}
+  config.filter_sensitive_data('HIDE MY KEY') { ENV['mapquest_api_key'] }
   config.configure_rspec_metadata!
 end
 Shoulda::Matchers.configure do |config|

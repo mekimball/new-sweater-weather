@@ -5,7 +5,8 @@ RSpec.describe 'weather requests' do
     get '/api/v1/backgrounds?location=denver,co'
 
     expect(response).to have_http_status(200)
-    background = JSON.parse(response.body, symbolize_names: true)[:data][:attributes]
+    background = JSON.parse(response.body,
+                            symbolize_names: true)[:data][:attributes]
 
     expect(background).to have_key(:image)
     expect(background[:image][:location]).to eq('denver,co')
