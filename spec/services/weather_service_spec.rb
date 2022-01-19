@@ -35,4 +35,10 @@ RSpec.describe WeatherService do
     expect(results.first[:weather].first).to have_key(:description)
     expect(results.first[:weather].first).to have_key(:icon)
   end
+
+  it 'can find weather by time', :vcr do
+    results = WeatherService.time_weather('39.7385', '-104.9849', 3)
+
+    expect(results[:weather].first[:description]).to eq('broken clouds')
+  end
 end

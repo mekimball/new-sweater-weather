@@ -16,4 +16,12 @@ RSpec.describe MapquestService do
     expect(results_parsed[:lat]).to be_a(Float)
     expect(results_parsed[:lng]).to be_a(Float)
   end
+
+  it 'can return return travel time', :vcr do
+    results = MapquestService.get_directions('denver,co', 'pueblo,co')
+
+    expect(results).to have_key(:route)
+    expect(results[:route][:formattedTime]).to eq("01:45:23")
+
+  end
 end
