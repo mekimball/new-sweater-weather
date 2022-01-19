@@ -46,3 +46,9 @@ spec/fixtures/vcr_cassettes/weather_requests/can_return_a_forecast.yml
 spec/fixtures/vcr_cassettes/WeatherFacade/returns_weather.yml
 spec/fixtures/vcr_cassettes/WeatherService/can_return_current_weather_data.yml
 spec/fixtures/vcr_cassettes/WeatherService/can_return_daily_weather.yml
+app/controllers/api/v1/road_trip_controller.rb
+spec/fixtures/vcr_cassettes/MapquestService/can_return_return_travel_time.yml
+spec/fixtures/vcr_cassettes/road_trips/can_return_directions.yml
+spec/fixtures/vcr_cassettes/RoadTripFacade/returns_a_location.yml
+spec/fixtures/vcr_cassettes/RoadTripFacade/returns_trip_duration.yml
+spec/fixtures/vcr_cassettes/WeatherService/can_find_weather_by_time.yml
