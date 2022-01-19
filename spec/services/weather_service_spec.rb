@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe WeatherService do
-
   it 'can establish a connection', :vcr do
     expect(WeatherService.conn).to be_a(Faraday::Connection)
   end

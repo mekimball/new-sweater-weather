@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe HourlyWeather do
   before do
-    @hourly_weather = WeatherFacade.get_weather('39.738453', '-104.984853')[:hourly_weather]
+    @hourly_weather = WeatherFacade.get_weather('39.738453',
+                                                '-104.984853')[:hourly_weather]
   end
 
   it 'exists', :vcr do

@@ -52,3 +52,6 @@ spec/fixtures/vcr_cassettes/road_trips/can_return_directions.yml
 spec/fixtures/vcr_cassettes/RoadTripFacade/returns_a_location.yml
 spec/fixtures/vcr_cassettes/RoadTripFacade/returns_trip_duration.yml
 spec/fixtures/vcr_cassettes/WeatherService/can_find_weather_by_time.yml
+spec/fixtures/vcr_cassettes/RoadTrip/exists.yml
+spec/fixtures/vcr_cassettes/RoadTrip/has_long_and_lat.yml
+spec/fixtures/vcr_cassettes/RoadTrip/returns_error_if_trip_is_not_possible.yml

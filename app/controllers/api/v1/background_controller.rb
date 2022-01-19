@@ -1,5 +1,4 @@
 class Api::V1::BackgroundsController < ApplicationController
-
   def index
     pry
     # coords = MapquestFacade.get_location(params[:location])

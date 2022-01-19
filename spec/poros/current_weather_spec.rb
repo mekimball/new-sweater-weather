@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe CurrentWeather do
   before do
-    @current_weather = WeatherFacade.get_weather('39.738453', '-104.984853')[:current_weather]
+    @current_weather = WeatherFacade.get_weather('39.738453',
+                                                 '-104.984853')[:current_weather]
   end
 
   it 'exists', :vcr do
@@ -18,6 +19,6 @@ RSpec.describe CurrentWeather do
     expect(@current_weather.sunset).to eq(' 5:02 PM')
     expect(@current_weather.temperature).to eq(45.66)
     expect(@current_weather.uvi).to eq(1.21)
-    expect(@current_weather.visibility).to eq(10000)
+    expect(@current_weather.visibility).to eq(10_000)
   end
 end

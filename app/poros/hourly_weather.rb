@@ -3,9 +3,9 @@ class HourlyWeather
               :temperature,
               :conditions,
               :icon
-    
+
   def initialize(data)
-    @time         = Time.at(data[:dt]).strftime("%l:%M %p")
+    @time         = Time.at(data[:dt]).strftime('%l:%M %p')
     @temperature  = data[:temp]
     @conditions   = data[:weather].first[:description]
     @icon         = data[:weather].first[:icon]
