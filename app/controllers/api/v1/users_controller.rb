@@ -10,9 +10,7 @@ class Api::V1::UsersController < ApplicationController
       end
     else
       render json: {error: 'Passwords do not match'}
-    require 'pry'; binding.pry
     end
-    # render json: {data: { id: 'null', type: 'forecast', attributes: WeatherFacade.get_weather(coords.lattitude, coords.longitude)}}
   end
 
   private
