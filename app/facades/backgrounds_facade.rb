@@ -1,7 +1,6 @@
-class BackgroundFacade
+class BackgroundsFacade
   def self.get_background(city)
-    location = BackgroundService.parsed_location_data(city)
-    latLng = location[:results].first[:locations].first[:latLng]
-    Location.new(latLng)
+    background = BackgroundService.parsed_background(city)
+    Background.new(background, city)
   end
 end
